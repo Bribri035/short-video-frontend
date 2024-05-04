@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'React';
+import React, {useState, useEffect} from 'react';
 import './App.css';
-import Video from './Video';
 import axios from './axios';
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
   return (
     <div className="app">
       <div className="app_videos">
-        {videos.map(({url, channel, description, song, likes, shares, messages})=>(
+      {videos.map(({url, channel, description, song, likes, shares, messages})=>(
           <video
           key={url} 
           url={url}
@@ -28,7 +27,6 @@ function App() {
           messages={messages}
           />
         ))}
-
         </div>
     </div>
   );
